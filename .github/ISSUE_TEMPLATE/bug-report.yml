@@ -1,6 +1,6 @@
 name: 🪲 Bug Report 
 description: Report a bug 
-title: "🪲"
+title: "[🪲]"
 labels: ["bug"]
 body:
   - type: markdown
@@ -25,20 +25,48 @@ body:
     validations:
       required: true
   - type: textarea
+    id: actual
+    attributes:
+      label: What was the actual result?
+      placeholder: This happened
+    validations:
+      required: true
+  - type: textarea
     id: expected
     attributes:
       label: What was the expected result?
       placeholder: I expected this to happen
+    validations:
+      required: true
   - type: textarea
     id: screenshots
     attributes:
       label: Put here any screenshots or videos (optional)
   - type: dropdown
-    id: assign
+    id: browser
     attributes:
-      label: "Would you like to work on this issue?"
+      label: "OS"
       options:
-        - "Yes"
+        - "Windows"
+        - "MacOS"
+        - "Android"
+        - "iOS"
+        - "Other (mention in the description)"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: "Browser"
+      options:
+        - "Chrome"
+        - "Safari"
+        - "Edge"
+        - "Firefox"
+        - "Opera"
+        - "Other (mention in the description)"
+    validations:
+      required: true
   - type: dropdown
     id: Severity
     attributes:
@@ -49,6 +77,8 @@ body:
         - "Major (S3)"
         - "Minor (S4)"
         - "Trivial (S5)"
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
