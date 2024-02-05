@@ -1,6 +1,6 @@
-name: ":frog: Bug Report"
-description: Report a bug
-labels: ["bug"]
+name: Bug Report 
+description: Report a bug 
+labels: ["bug :frog:"]
 body:
   - type: markdown
     attributes:
